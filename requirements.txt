@@ -39,3 +39,8 @@ ipykernel
 tqdm
 seaborn
 
+# --- Images Tools ----
+opencv-python
+pytesseract
+easyocr
+

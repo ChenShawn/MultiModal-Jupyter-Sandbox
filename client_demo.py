@@ -5,7 +5,12 @@ from PIL import Image
 from io import BytesIO
 
 code_1 = """
+from PIL import Image
+import pytesseract
+import cv2
+import easyocr
 import matplotlib.pyplot as plt
+
 x = [1,2,3]
 y = [4,8,6]
 print(f' [DEBUG] {x=}')
@@ -14,9 +19,9 @@ plt.plot(x, y)
 plt.title('Debug Plot')
 plt.show()
 
-# import time
-# while True:
-#     time.sleep(1)
+import time
+while True:
+    time.sleep(1)
 """
 
 code_2 = """
@@ -101,6 +106,7 @@ res1 = requests.post(
 ).json()
 
 print(res1)
+exit()
 
 target_image = Image.open('highlighted_space.jpg').convert('RGB')
 target_image_base64 = image_to_base64(target_image)
