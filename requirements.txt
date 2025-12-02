@@ -17,6 +17,7 @@ redis
 numpy
 scipy
 pandas
+sympy
 
 # --- Machine Learning / Deep Learning ---
 scikit-learn
@@ -44,3 +45,8 @@ opencv-python
 pytesseract
 easyocr
 
+# V2
+jupyter-client
+ipython
+ipykernel
+dill
