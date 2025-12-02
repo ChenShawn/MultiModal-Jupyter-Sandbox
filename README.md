@@ -1,9 +1,9 @@
 ## Release Logs
 
 [20251202]
-Update version Jupyter-Sandbox-V2, which is adapted from [GPTOSS tools](https://github.com/openai/gpt-oss/blob/main/gpt_oss/tools/python_docker/docker_tool.py).
+Update version Jupyter-Sandbox-V2, which is adapted from [GPT-OSS tools](https://github.com/openai/gpt-oss/blob/main/gpt_oss/tools/python_docker/docker_tool.py).
 
-The docker container can be found on dockerhub via:
+The docker image can be found on [this dockerhub repo](https://hub.docker.com/repository/docker/chenshawn6915/multimodal-ipython-sandbox/general) via:
 ```bash
 docker pull chenshawn6915/multimodal-ipython-sandbox:oss-v2
 ```
