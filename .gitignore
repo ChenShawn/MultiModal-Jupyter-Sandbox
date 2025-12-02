@@ -1,0 +1,6 @@
+*.log
+*.png
+*.jpg
+uvilog/
+__pycache__/
+debug_output/
