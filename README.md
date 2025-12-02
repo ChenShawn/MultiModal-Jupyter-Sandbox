@@ -1,3 +1,15 @@
+## Release Logs
+
+[20251202]
+Update version Jupyter-Sandbox-V2, which is adapted from [GPTOSS tools](https://github.com/openai/gpt-oss/blob/main/gpt_oss/tools/python_docker/docker_tool.py).
+
+The docker container can be found on dockerhub via:
+```bash
+docker pull chenshawn6915/multimodal-ipython-sandbox:oss-v2
+```
+
+----------------
+
 ## Introduction
 
 Yet another code sandbox for agent RL training ... but in jupyter notebook style.
