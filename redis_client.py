@@ -1,7 +1,7 @@
 import redis
 import logging
 
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = 'host.docker.internal'
 REDIS_PORT = 26379
 REDIS_PSWD = 'agirl'
 

@@ -1,6 +1,7 @@
 import random
 import requests
 import base64
+import uuid
 from PIL import Image
 from io import BytesIO
 
@@ -11,6 +12,7 @@ import cv2
 import easyocr
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 
 x = [1,2,3]
 y = [4,8,6]
@@ -22,6 +24,9 @@ plt.show()
 """
 
 code_2 = """
+a = random.randint(0, 10000)
+print(f"{a=}")
+
 x = np.array(x)
 y = np.array(y)
 z = x + y
@@ -81,11 +86,11 @@ def image_to_base64(img: Image.Image, format: str = "PNG") -> str:
     return img_base64
 
 
-test_sid = 'degdsaf_jupyter_251203'
+test_sid = str(uuid.uuid4())
 test_timeout = 10
 
 res1 = requests.post(
-    'http://127.0.0.1:12345/run_jupyter',
+    "http://10.39.168.53:80/run_jupyter",
     json={
         "session_id": test_sid,
         "code": code_1,
@@ -94,15 +99,15 @@ res1 = requests.post(
 ).json()
 
 result_dict = res1['output']
-print(f' [stdout] {result_dict["stdout"]=}')
-print(f' [stderr] {result_dict["stderr"]=}')
-print(f' [images] {len(result_dict["images"])=}')
+print(f' [111] [stdout] {result_dict["stdout"]=}')
+print(f' [111] [stderr] {result_dict["stderr"]=}')
+print(f' [111] [images] {len(result_dict["images"])=}')
 
 # target_image = Image.open('highlighted_space.jpg').convert('RGB')
 # target_image_base64 = image_to_base64(target_image)
 # code_string = INITIALIZATION_CODE_TEMPLATE.format(base64_image=target_image_base64)
 res2 = requests.post(
-    'http://127.0.0.1:12345/run_jupyter',
+    "http://10.39.168.53:80/run_jupyter",
     json={
         "session_id": test_sid,
         "code": code_2,

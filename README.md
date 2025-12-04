@@ -27,7 +27,7 @@ docker pull chenshawn6915/multimodal-ipython-sandbox:latest
 
 Execution:
 ```bash
-docker run -d -p 18901-18904:18901-18904 chenshawn6915/multimodal-ipython-sandbox:latest
+docker run -d -p 18901-18904:18901-18904 --add-host=host.docker.internal:172.17.0.1 chenshawn6915/multimodal-ipython-sandbox:latest
 ```
 
 By default, there will be 4 code sandbox processes running on ports 18901-18904 respectively.
