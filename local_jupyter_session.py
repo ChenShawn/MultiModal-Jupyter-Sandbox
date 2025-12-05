@@ -226,7 +226,7 @@ async def run_jupyter_code(client, session_id, code_string, timeout):
     jupyter_output = jupyter_session.execute(code_string, timeout=timeout)
     state = jupyter_session.dump()
     client.conn.set(session_id, state)
-    client.conn.expire(session_id, 3600 * 6)  # 6 hours expiration
+    client.conn.expire(session_id, 3600 * 1)  # 1 hours expiration
     # print(f" [DEBUG 333] {state}")
     jupyter_session.close()
     return jupyter_output
@@ -244,7 +244,7 @@ def __test_run_jupyter_code(client, session_id, code_string, timeout):
     jupyter_output = jupyter_session.execute(code_string, timeout=timeout)
     state = jupyter_session.dump()
     client.conn.set(session_id, state)
-    client.conn.expire(session_id, 3600 * 6)  # 6 hours expiration
+    client.conn.expire(session_id, 3600 * 1)  # 1 hours expiration
     print(f" [DEBUG 333] {state}")
     jupyter_session.close()
     return jupyter_output
